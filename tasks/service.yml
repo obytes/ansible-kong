@@ -11,7 +11,7 @@
 
 - name: Get list of service objects configured in kong
   uri:
-    url: "{{ kong_admin_api_url|default('http://localhost:8001') }}/services"
+    url: "{{ kong_admin_api_url|default('http://localhost:8001') }}/services?size=1000"
   register: services
 
 #- debug: var=services
